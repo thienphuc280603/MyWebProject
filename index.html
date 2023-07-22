@@ -1,0 +1,617 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js"
+        integrity="sha384-+sLIOodYLS7CIrQpBjl+C7nPvqq+FbNUBDunl/OZv93DB7Ln/533i8e/mZXLi/P+"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+        integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <link rel="stylesheet" href="./fontawesome-free-6.2.1-web/css/all.css">
+    <link rel="stylesheet" href="./css/styles.css">
+    <script src="http://code.angularjs.org/snapshot/angular.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-route.js"></script>
+</head>
+
+<body ng-app="myapp" ng-controller="myctrl">
+
+    <div class="f1-effect">
+
+        <div class="f1-effect-flower">
+        </div>
+
+        <div class="f1-effect-flower">
+        </div>
+
+        <div class="f1-effect-flower">
+        </div>
+
+        <div class="f1-effect-flower">
+        </div>
+
+        <div class="f1-effect-flower">
+        </div>
+
+        <div class="f1-effect-flower">
+        </div>
+
+        <div class="f1-effect-flower">
+        </div>
+
+        <div class="f1-effect-flower">
+        </div>
+
+        <div class="f1-effect-flower">
+        </div>
+
+        <div class="f1-effect-flower">
+        </div>
+
+    </div>
+
+    <header>
+        <div class="top">
+            <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #ff6700;">
+                <a class="navbar-brand" href="#!home"><img src="./images/logo.svg" alt="" width="80%"></a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse"
+                    data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item active">
+                            <a id="a" class="nav-link" href="#"><button type="button" class="btn btn-outline-warning"
+                                    style="background-color: #ffa366; color: aliceblue; border: 0;">Danh
+                                    mục</button></a>
+
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="btn btn-secondary dropdown-toggle" href="#" role="button" data-toggle="dropdown"
+                                aria-expanded="false"
+                                style="background-color: #ffa366; color: aliceblue; margin-top: 8px; border: 0 ;height: 36px;">
+                                Xem giá, tồn kho tại
+                            </a>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" href="#">Hà Nội</a>
+                                <a class="dropdown-item" href="#">Đà Nẵng</a>
+                                <a class="dropdown-item" href="#">TP.HCM</a>
+                                <a class="dropdown-item" href="#">Cần Thơ</a>
+                                <a class="dropdown-item" href="#">Hải Dương</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="#">Hải Phòng</a>
+                            </div>
+                        </li>
+
+                    </ul>
+                    <form class="form-inline my-2 my-lg-0" style="margin-right: 50px;">
+                        <input class="form-control mr-sm-2" type="search" placeholder="Bạn tìm gì..."
+                            aria-label="Search" ng-model="search">
+                        <a href="#!timkiem" class="btn btn-warning" type="submit"
+                            style="background-color: #ffa366; padding: 0 10px; margin: 0;"><i
+                                class="fa-solid fa-magnifying-glass"></i></a>
+                    </form>
+                    <ul class="navbar-nav ">
+                        <li class="nav-item ">
+                            <a class="nav-link" href="#" style="color:aliceblue;">
+                                <i class="fa-solid fa-phone-volume"></i>
+                                Gọi mua hàng</br>
+                                085 5100 001
+                            </a>
+                        </li>
+                        <li class=" nav-item">
+                            <a class="nav-link" href="#" style="color:aliceblue;">
+                                <i class="fa-solid fa-map-location-dot"></i>
+                                Cửa hàng</br>
+                                gần bạn
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#!cart" style="color:aliceblue;"> <i
+                                    class="fa-solid fa-cart-shopping"></i>{{cart.length}}</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="" style="color:aliceblue;"> <i class="fa-regular fa-user"></i></a>
+                        </li>
+
+                    </ul>
+
+                </div>
+            </nav>
+        </div>
+    </header>
+    <div ng-view></div>
+    <div class="container-md">
+        <div class="menu">
+            <a href="" class="text-reset"><img src="./images/new_hot.svg" alt="">24H CÔNG NGHỆ</a>
+            <a href="" class="text-reset">Xem tất cả tin công nghệ</a>
+        </div>
+    </div>
+
+    <div class="container-md">
+        <div class="container-md__new">
+            <div class="row">
+                <div class="col-md-7 container-md__new--banner">
+                    <a href="" class="text-reset">
+                        <img src="./images/so-sanh-galaxy-s23-ultra-va-galaxy-s22-ultra_1672942822.webp" alt=""
+                            width="100%">
+                        <p>So sánh Galaxy S23 Ultra và Galaxy S22 Ultra, liệu Samsung có lặp lại lịch sử?</p>
+                        <p>Samsung Galaxy S22 Ultra đã khẳng định tên tuổi bằng cách đứng đầu danh sách những chiếc điện
+                            thoại hot nhất năm 2022. Liệu thế hệ sắp ra mắt tiếp theo...</p>
+                    </a>
+                </div>
+
+                <div class="col-md-5">
+                    <div class="container-md__new--media">
+                        <a href="" class="text-reset">
+                            <img src="https://didongthongminh.vn/images/news/2023/01/small/so-sanh-samsung-galaxy-a14-5g-va-galaxy-a13-5g_1672919891.webp"
+                                alt="">
+                            <p>So sánh Samsung Galaxy A14 5G và Galaxy A13 5G, liệu có đáng để lên đời?</p>
+                        </a>
+                    </div>
+                    <div class="container-md__new--media">
+                        <a href="" class="text-reset">
+                            <img src="https://didongthongminh.vn/images/news/2023/01/small/galaxy-a14-5g-ra-mat-voi-man-hinh-fhd-va-camera-selfie-13mp_1672916953.webp"
+                                alt="">
+                            <p>Samsung Galaxy A14 5G ra mắt với màn hình FHD+ và camera selfie 13MP</p>
+                        </a>
+                    </div>
+                    <div class="container-md__new--media">
+                        <a href="" class="text-reset">
+                            <img src="https://didongthongminh.vn/images/news/2023/01/small/iphone-11-pro-max---gia%CC%81-sie%CC%82u-re%CC%89_1672827818.webp"
+                                alt="">
+                            <p>Có nên mua iPhone 11 Pro Max năm 2023? Tư vấn chi tiết nhất!</p>
+                        </a>
+
+                    </div>
+                    <div class="container-md__new--media">
+                        <a href="" class="text-reset">
+                            <img src="https://didongthongminh.vn/images/news/2022/12/small/he%CC%A3n-ga%CC%A3%CC%86p-ba%CC%A3n_1672472009.webp"
+                                alt="">
+                            <p>Tặng ngay một chỉ vàng 9999 khi mua Galaxy Z Flip4 và Z Fold4</p>
+                        </a>
+
+                    </div>
+                    <div class="container-md__new--media">
+                        <a href="" class="text-reset">
+                            <img src="https://didongthongminh.vn/images/news/2022/12/small/uu-dai-crm-khi-mua-samsung-galaxy-tab-s8-series_1672458465.webp"
+                                alt="">
+                            <p>Chương trình ưu đãi 2 triệu đồng dành cho người dùng khi mua Galaxy Tab S8 series</p>
+                        </a>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid">
+        <div class="container-md">
+            <div class="row">
+                <div class="col-xs-6 footer__link--info">
+                    <a href="" class="text-reset">Poco x4 Pro</a>
+                    </br>
+                    <a href="" class="text-reset">iPhone cũ giá rẻ</a>
+                    </br>
+                    <a href="" class="text-reset">iPhone 11 cũ</a>
+                    </br>
+                    <a href="" class="text-reset">iPhone 12 Pro Max cũ</a>
+                    </br>
+                </div>
+
+                <div class="col-xs-6 footer__link--info">
+                    <a href="" class="text-reset">Redmi note 11 Pro</a>
+                    </br>
+                    <a href="" class="text-reset">iPhone 11 chính hãng</a>
+                    </br>
+                    <a href="" class="text-reset">Galaxy S22 Ultra</a>
+                    </br>
+                    <a href="" class="text-reset">iPad Air siêu rẻ</a>
+                    </br>
+                </div>
+
+                <div class="col-xs-6 footer__link--info">
+                    <a href="" class="text-reset">Laptop LG Gram 2021</a>
+                    </br>
+                    <a href="" class="text-reset">iPhone 13</a>
+                    </br>
+                    <a href="" class="text-reset">iPhone 12 Pro</a>
+                    </br>
+                    <a href="" class="text-reset">iPad cũ</a>
+                    </br>
+                </div>
+
+                <div class="col-xs-6 footer__link--info">
+                    <a href="" class="text-reset">Có nên mua iPhone 12 Pro Max</a>
+                    </br>
+                    <a href="" class="text-reset">2022</a>
+                    </br>
+                    <a href="" class="text-reset">iPhone</a>
+                    </br>
+                    <a href="" class="text-reset">iPhone 14 Pro Max</a>
+                    </br>
+                </div>
+
+                <div class="col-xs-6 footer__link--info">
+                    <a href="" class="text-reset">Xiaomi redmi note</a>
+                    </br>
+                    </br>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+    </div>
+
+
+    <div class="container-md">
+        <div class="footer__top">
+            <div class="row">
+                <div class="col-md-3">
+                    <p class="title">Thông tin liên hệ</p></br>
+                    <a href="">Giới thiệu</a></br>
+                    <a href="">Hệ thống cửa hàng</a></br>
+                    <a href="">Chính sách bảo mật</a></br>
+                    <a href="">Mail</a></br>
+                    <p class="title">Hỗ trợ thanh toán</p></br>
+                    <img src="./images/visa.svg" alt="">
+                    <img src="./images/master_card.svg" alt="">
+                    <img src="./images/jbc.svg" alt="">
+                    <img src="./images/money.svg" alt="">
+                    <img src="./images/inter.svg" alt="">
+                    <img src="./images/tragop.svg" alt="">
+                    <a href="http://online.gov.vn/Home/WebDetails/9876?AspxAutoDetectCookieSupport=1"><img
+                            src="./images/bct.svg" alt=""></a>
+                    <a
+                        href="https://www.dmca.com/Protection/Status.aspx?ID=2dc901db-8576-4fea-ac8f-709448f10282&refurl=https://didongthongminh.vn/"><img
+                            src="./images/_dmca_premi_badge_4.png" alt=""></a>
+                </div>
+
+                <div class="col-md-3">
+                    <p class="title">Thông tin liên hệ</p></br>
+                    <a href="">Giới thiệu</a></br>
+                    <a href="">Hệ thống cửa hàng</a></br>
+                    <a href="">Chính sách bảo mật</a></br>
+                    <a href="">Mail</a></br>
+                </div>
+
+                <div class="col-md-3">
+                    <p class="title">Thông tin liên hệ</p></br>
+                    <a href="">Giới thiệu</a></br>
+                    <a href="">Hệ thống cửa hàng</a></br>
+                    <a href="">Chính sách bảo mật</a></br>
+                    <a href="">Mail</a></br>
+                </div>
+
+                <div class="col-md-3">
+                    <p class="title">Thông tin liên hệ</p></br>
+                    <a href="">Giới thiệu</a></br>
+                    <a href="">Hệ thống cửa hàng</a></br>
+                    <a href="">Chính sách bảo mật</a></br>
+                    <a href="">Mail</a></br>
+
+                    <p class="title">Kết nối với chúng tôi</p>
+                    <a href="https://www.facebook.com/didongthongminh.vn/"><img src="./images/logoface2.svg" alt=""></a>
+                    <a href="https://www.youtube.com/c/dreview"><img src="./images/logoyutube.svg" alt=""></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid footers">
+        <div class="footer">
+            <p>@ Bản quyền thuộc về Công Ty Cổ Phần Viễn Thông Di Động Thông Minh</p>
+        </div>
+    </div>
+    <script>
+        var indexCart = 0;
+        var app = angular.module("myapp", ["ngRoute"]);
+        app.controller("myctrl", function ($scope, $rootScope, $routeParams) {
+
+            $scope.giaTri = 4;
+            $scope.solannhan = 0;
+            $scope.xemThem = function () {
+                if ($scope.giaTri == 4) {
+                    $scope.giaTri = 8;
+                } else {
+                    $scope.giaTri = 4;
+                }
+            }
+
+            $scope.phones = [
+                {
+                    image: "iphone11promax.webp",
+                    name: "iPhone 11 Pro Max Cũ Đẹp 64GB",
+                    price: 10790000,
+                    del: 18590000,
+                    km: "Tặng kèm sạc",
+                    id: 1,
+                    loai: 'dt'
+                },
+
+                {
+                    image: "iPhone-12-Pro-Max_(2)(1).webp",
+                    name: "iPhone 12 Pro Max 128GB Cũ Đẹp",
+                    price: 15990000,
+                    del: 24990000,
+                    kh: "Tặng sạc và dáng màn hình",
+                    id: 2,
+                    loai: 'dt'
+                },
+
+                {
+                    image: "Z-Fold-4-xanh.webp",
+                    name: "Samsung Galaxy Z Fold4 12GB/256GB Chính hãng",
+                    price: 29990000,
+                    del: 40990000,
+                    kh: "Tặng sạc và dáng màn hình",
+                    id: 3,
+                    loai: 'dt'
+                },
+
+                {
+                    image: "A53-cam.webp",
+                    name: "Samsung Galaxy A53 5G 8GB 128GB Chính Hãng",
+                    price: 6990000,
+                    del: 9990000,
+                    kh: "Tặng sạc và dáng màn hình",
+                    id: 4,
+                    loai: 'dt'
+                },
+
+                {
+                    image: "Redmi-Note-11-xanh.webp",
+                    name: "Xiaomi Redmi Note 11S 8GB/128GB Chính hãng",
+                    price: 5390000,
+                    del: 6690000,
+                    kh: "Tặng sạc và dáng màn hình",
+                    id: 5,
+                    loai: 'dt'
+                },
+
+                {
+                    image: "iPhone-14-Pro-Max(5).webp",
+                    name: "iPhone 14 Pro Max 128GB Chính hãng VN/A",
+                    price: 29890000,
+                    del: 36390000,
+                    kh: "Tặng sạc và dáng màn hình",
+                    id: 6,
+                    loai: 'dt'
+                },
+
+                {
+                    image: "s22Untral.webp",
+                    name: "Samsung Galaxy S22 Ultra 8GB/128GB Chính hãng",
+                    price: 19990000,
+                    del: 30990000,
+                    kh: "Tặng sạc và dáng màn hình",
+                    id: 7,
+                    loai: 'dt'
+                },
+
+                {
+                    image: "iPhone-11-64GB-Trang.webp",
+                    name: "iPhone 11 64GB Chính Hãng VN/A",
+                    price: 10790000,
+                    del: 17990000,
+                    kh: "Tặng sạc và dáng màn hình",
+                    id: 8,
+                    loai: 'dt'
+                },
+                /////////////////////////////////////
+                {
+                    image: "Macbook-Air-M2.webp",
+                    name: "Macbook Air M2 8GB/256GB Chính Hãng",
+                    price: 25890000,
+                    del: 30490000,
+                    id: 9,
+                    loai: 'lap'
+
+                },
+
+                {
+                    image: "Macbook-Pro-M1-2021(2).webp",
+                    name: "MacBook Pro 14 inch M1 Pro 10CPU 16GB",
+                    price: 48490000,
+                    del: 63990000,
+                    id: 10,
+                    loai: 'lap'
+                },
+
+                {
+                    image: "m12020.webp",
+                    name: "MacBook Pro 13 inch M1 8GB/512GB 2020",
+                    price: 28990000,
+                    del: 36390000,
+                    id: 11,
+                    loai: 'lap'
+                },
+
+                {
+                    image: "lg2021.webp",
+                    name: "Laptop LG gram 2021 16Z90P",
+                    price: 27990000,
+                    del: 48890000,
+                    id: 12,
+                    loai: 'lap'
+                },
+                ///////////////////////////
+                {
+                    image: "dh1.webp",
+                    name: "Đồng hồ thông minh dTime Luxury",
+                    price: 990000,
+                    del: 2190000,
+                    id: 13,
+                    loai: 'dh'
+                },
+
+                {
+                    image: "dh2.webp",
+                    name: "Apple Watch Series 7 45mm GPS Viền nhôm dây cao su",
+                    price: 8890000,
+                    del: 11290000,
+                    id: 14,
+                    loai: 'dh'
+                },
+
+                {
+                    image: "dh3.webp",
+                    name: "Đồng Hồ Thông Minh dTime Gold",
+                    price: 990000,
+                    del: 1990000,
+                    id: 15,
+                    loai: 'dh'
+                },
+
+                {
+                    image: "dh4.webp",
+                    name: "Apple Watch SE 2022 40mm GPS Viền nhôm dây cao su",
+                    price: 5890000,
+                    del: 6790000,
+                    id: 16,
+                    loai: 'dh'
+                },
+            ];
+            $scope.sales1 = [
+                {
+                    image: "https://didongthongminh.vn/images/products/2023/01/02/resized/A23-4G-den.webp",
+                    name: "Samsung Galaxy A23 4GB/128GB Chính Hãng"
+                },
+
+                {
+                    image: "https://didongthongminh.vn/images/products/2023/01/02/resized/Z-Fold-4-xanh.webp",
+                    name: "Samsung Galaxy Z Fold4 12GB/256GB Chính hãng"
+                },
+
+                {
+                    image: "https://didongthongminh.vn/images/products/2023/01/02/resized/A53-cam.webp",
+                    name: "Samsung Galaxy A53 5G 8GB 128GB Chính Hãng"
+                },
+
+                {
+                    image: "https://didongthongminh.vn/images/products/2023/01/04/resized/4(2).webp",
+                    name: "Samsung Galaxy S22 Ultra 8GB/128GB Chính hãng"
+                },
+
+                {
+                    image: "https://didongthongminh.vn/images/products/2022/12/01/resized/redmi-note-11-4g-chinh-hang_1648892675.webp",
+                    name: "Redmi Note 11 Xiaomi Fan Festival chính hãng"
+                },
+            ];
+            $scope.sales2 = [
+                {
+                    image: "https://didongthongminh.vn/images/products/2022/12/29/resized/Tab-A7-Lite.webp",
+                    name: "Máy tính bảng Samsung Galaxy Tab A7 Lite (SM-T225N)"
+                },
+
+                {
+                    image: "https://didongthongminh.vn/images/products/2022/12/29/resized/xiaomi-remi-10c-xanh-la.webp",
+                    name: "Xiaomi Redmi 10C 4GB/128GB Chính Hãng"
+                },
+
+                {
+                    image: "https://didongthongminh.vn/images/products/2023/01/02/resized/A13-cam.webp",
+                    name: "Samsung Galaxy A53 5G 8GB 128GB Chính Hãng"
+                },
+
+                {
+                    image: "https://didongthongminh.vn/images/products/2023/01/02/resized/A23-4G-den.webp",
+                    name: "Samsung Galaxy A23 4GB/128GB Chính Hãng"
+                },
+
+                {
+                    image: "https://didongthongminh.vn/images/products/2023/01/02/resized/iPhone-12-Pro-Max_(2)(1).webp",
+                    name: "iPhone 12 Pro Max Cũ Đẹp 256GB"
+                },
+            ];
+            $scope.index = $routeParams.url;
+            $scope.addToCart = function (p) {
+                if (typeof $rootScope.cart == 'undefined') {
+                    $rootScope.cart = [];
+                };
+                $scope.countCart = $rootScope.cart.length;
+                if ($rootScope.cart.filter(i => i.id == p.id).length == 0) {
+                    $rootScope.cart.push(p);
+                    $rootScope.cart[$scope.countCart].quantity = 1;
+                }
+                console.log($rootScope.cart);
+            }
+            $rootScope.sumMoney = 0;
+            if (typeof $rootScope.cart != 'undefined') {
+                for (var i = 0; i < $rootScope.cart.length; i++) {
+                    $rootScope.sumMoney = $rootScope.sumMoney + $rootScope.cart[i].quantity * $rootScope.cart[i].price;
+                }
+            }
+
+            $scope.addClick = function (index) {
+                $rootScope.cart[index].quantity = $rootScope.cart[index].quantity + 1;
+                if (typeof $rootScope.cart != 'undefined') {
+                    $rootScope.sumMoney = 0;
+                    for (var i = 0; i < $rootScope.cart.length; i++) {
+                        $rootScope.sumMoney = $rootScope.sumMoney + $rootScope.cart[i].quantity * $rootScope.cart[i].price;
+                    }
+                }
+            }
+            $scope.subClick = function (index) {
+                if ($scope.cart[index].quantity > 1) {
+                    $rootScope.cart[index].quantity = $rootScope.cart[index].quantity - 1;
+                }
+
+                if (typeof $rootScope.cart != 'undefined') {
+                    $rootScope.sumMoney = 0;
+                    for (var i = 0; i < $rootScope.cart.length; i++) {
+                        $rootScope.sumMoney = $rootScope.sumMoney + $rootScope.cart[i].quantity * $rootScope.cart[i].price;
+                    }
+                }
+            }
+
+            // $scope.tim;
+            // $scope.timkim = function () {
+            //     this.tim = $scope.search;
+            // };
+            $scope.delProduct = function (index) {
+                $rootScope.cart.splice(index, 1);
+                if (typeof $rootScope.cart != 'undefined') {
+                    $rootScope.sumMoney = 0;
+                    for (var i = 0; i < $rootScope.cart.length; i++) {
+                        $rootScope.sumMoney = $rootScope.sumMoney + $rootScope.cart[i].quantity * $rootScope.cart[i].price;
+                    }
+                }
+            }
+        });
+        app.config(function ($routeProvider) {
+            $routeProvider
+                .when("/detail/:url", {
+                    templateUrl: "detailProduct.html?" + Math.random(),
+                    controller: "myctrl"
+                })
+                .when("/cart", {
+                    templateUrl: "cart.html?" + Math.random(),
+                    controller: "myctrl"
+                })
+                .when("/timkiem", {
+                    templateUrl: "timkiem.html?" + Math.random(),
+                    controller: "myctrl"
+                })
+                .otherwise({
+                    templateUrl: "trangchu.html",
+                    controller: "myctrl"
+                })
+        });
+
+    </script>
+</body>
+
+</html>

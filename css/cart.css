@@ -1,0 +1,159 @@
+body {
+    padding: 0;
+    margin: 0 auto;
+}
+
+i {
+    font-size: 20px;
+    margin-top: 10px;
+    padding: 5px;
+}
+
+.banner__header {
+    width: 90%;
+    margin: 100px auto 0 auto;
+}
+
+header {
+    margin-bottom: 20px;
+}
+
+.fa-chevron-right {
+    float: right;
+    font-size: 10px;
+    padding-top: 10px;
+}
+
+
+.nav-link {
+    display: flex;
+}
+
+.menu__left {
+    padding: 0px;
+}
+
+.top {
+    position: fixed;
+    z-index: 999;
+    top: 0;
+    width: 100%;
+}
+
+.container-fluid {
+    background-color: #f1f1f1;
+}
+
+.footer__link--info {
+    padding: 10px;
+    width: 20%;
+}
+
+.footer__link--info a {
+    font-size: 12px;
+    font-weight: 400;
+}
+
+
+.footer__link--info2 {
+    padding: 10px;
+    width: 20%;
+}
+
+.footer p {
+    padding: 10px;
+    margin: auto;
+    text-align: center;
+}
+
+.btn-outline-primary {
+    border-radius: 20px;
+}
+
+.footer__top a {
+    color: #898484;
+}
+
+.menu__right .media img {
+    border-radius: 5px;
+}
+
+.footer__top a:hover {
+    color: #ff6700;
+}
+
+.detail {
+    margin-top: 100px;
+}
+
+.product__info .image {
+    border: 1px solid rgb(234, 232, 232);
+    border-radius: 10px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.product__info .phone {
+    background-color: #f4f4f4;
+    margin-top: 20px;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+.product__info .phone p {
+    font-size: 14px;
+}
+
+#price {
+    color: red;
+}
+
+#del {
+    color: #676464;
+}
+
+.panel {
+    border: 1px solid rgb(194, 192, 192);
+    border-radius: 5px;
+}
+
+.panel .panel-title {
+    background-color: #f4f4f4;
+    padding: 5px;
+}
+
+.panel .panel-main {
+    padding: 5px;
+}
+
+#order {
+    border: 0;
+    border-radius: 5px;
+    background-image: linear-gradient(to right bottom, #FF6700, #fe9f23);
+    width: 100%;
+    margin-top: 10px;
+}
+
+#order p {
+    padding: 5px;
+    margin: 0;
+    font-weight: 700;
+    color: white;
+}
+
+.address {
+    border: 1px solid rgb(194, 192, 192);
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.address p {
+    padding: 0;
+    margin: 0;
+}
+
+.address__phone {
+    display: flex;
+    margin-bottom: 5px;
+}

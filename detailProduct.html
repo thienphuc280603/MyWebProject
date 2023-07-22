@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GioHang</title>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js"
+        integrity="sha384-+sLIOodYLS7CIrQpBjl+C7nPvqq+FbNUBDunl/OZv93DB7Ln/533i8e/mZXLi/P+"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+        integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <link rel="stylesheet" href="./fontawesome-free-6.2.1-web/css/all.css">
+    <link rel="stylesheet" href="./css/cart.css">
+</head>
+
+<body>
+    <div class="container-md detail">
+        <h4>{{phones[index].name}}</h4>
+        <hr>
+        <div class="row product__info">
+            <div class="col-md-5 left">
+
+                <div class="image">
+                    <img width="400px" src="./images/{{phones[index].image}}">
+                </div>
+
+                <div class="phone">
+                    <p>Gọi đặt mua: 085 5100 001 (Miễn phí 7:30 - 21:30)</p>
+                </div>
+            </div>
+            <div class="col-md-4 center">
+
+                <div class="form-group">
+                    <label style="margin-right: 20px; padding: 0;">Giá tại</label>
+                    <select name="city" id="city">
+                        <option value="">Hà Nội</option>
+                        <option value="">TP.HCM</option>
+                        <option value="">Đà Nẵng</option>
+                        <option value="">Thái Nguyên</option>
+                        <option value="">Cần Thơ</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="" id="price" style="margin-right: 10px;">{{phones[index].price}}đ</label>
+                    <label for="" id="del"><del>{{phones[index].del}}đ</del></label>
+                </div>
+
+                <div class="form-group">
+                    <p style="font-weight: 600; margin-bottom: 5px;">Lựa chọn dung lượng pin</p>
+                    <select class="form-control">
+                        <option value="">Pin 80-89% nguyên bảng</option>
+                        <option value="">Pin trên 90% nguyên bảng</option>
+                        <option value="">Pin 100% nguyên bảng</option>
+                        <option value="">Pin 100% thay mới</option>
+                    </select>
+                </div>
+
+                <div class="panel">
+                    <div class="panel-title">Khuyến mại</div>
+                    <div class="panel-main">
+                        <p><i class="fa-regular fa-circle-check" style="color: rgba(172, 255, 47, 0.726);"></i>Tặng sạc
+                            cáp BWOO 20W
+                        </p>
+                    </div>
+                </div>
+                <button id="order" ng-click="addToCart(phones[index])">
+                    <p>MUA NGAY</p>
+                    <p>Giao tận nơi hoặc nhận tại cửa hàng</p>
+                </button>
+                <a href="#!/">
+                    <p>Mua các sản phẩm khác</p>
+                </a>
+            </div>
+            <div class="col-md-3 right">
+                Cửa hàng có sẵn sản phẩm:
+                <div class="address">
+                    <p><i class="fa-solid fa-map-location-dot"></i>65 Hàm Nghi, quận Thanh Khê, Đà Nẵng</p>
+                    <p><i class="fa-solid fa-mobile-screen-button"></i>0899976655</p>
+                    <p><i class="fa-regular fa-circle-check" style="color: rgba(172, 255, 47, 0.726);"></i>Còn hàng</p>
+                    <hr>
+                    <p><i class="fa-solid fa-map-location-dot"></i>137 Xuân Thuỷ, Cầu Giấy, Hà Nội</p>
+                    <p><i class="fa-solid fa-mobile-screen-button"></i>0899976655</p>
+                    <p><i class="fa-regular fa-circle-check" style="color: rgba(172, 255, 47, 0.726);"></i>Còn hàng</p>
+                </div>
+
+                <div class="address">
+                    <a href="#!detail/{{$index}}" ng-repeat="w in watchs">
+                        <div class="address__phone">
+                            <img src="./images/{{w.image}}" width="100px">
+                            <div class="address__phone--info">
+                                <p>{{w.name}}</p>
+                                <p>Giá: {{w.price}}</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

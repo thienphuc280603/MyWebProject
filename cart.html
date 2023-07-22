@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/giohang.css">
+</head>
+
+<body>
+    <div class="container-md main-container">
+        <a href="#!">Mua thêm sản phẩm khác</a>
+        <table class="table">
+            <tr ng-repeat="c in cart track by $index">
+                <td>
+                    <p id="name">{{c.name}}</p>
+                </td>
+                <td><img width="100px" src="./images/{{c.image}}" alt=""></td>
+                <td>{{c.price| currency:"":0}}</td>
+                <td><span ng-click="subClick($index)">-</span> <span>{{c.quantity}}</span> <span
+                        ng-click="addClick($index)">+</span>
+                </td>
+                <td>{{c.price*c.quantity| currency:"":0}}</td>
+                <td> <span ng-click="delProduct($index)">Xóa</span></td>
+            </tr>
+            <tr>
+                <td colspan="4">
+                    <p id="name">Tổng tiền {{cart.length}} sản phẩm</p>
+                </td>
+                <td colspan="2">
+                    <p id="tong">{{sumMoney | currency:"":0}} vnđ</p>
+                </td>
+            </tr>
+        </table>
+    </div>
+</body>
+
+</html>

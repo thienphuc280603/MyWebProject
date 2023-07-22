@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login/Account</title>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js"
+        integrity="sha384-+sLIOodYLS7CIrQpBjl+C7nPvqq+FbNUBDunl/OZv93DB7Ln/533i8e/mZXLi/P+"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+        integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <link rel="stylesheet" href="./fontawesome-free-6.2.1-web/css/all.css">
+    <link rel="stylesheet" href="./css/login.css">
+</head>
+
+<body>
+    <header>
+        <div class="top">
+            <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #ff6700;">
+                <a class="navbar-brand" href="#"><img src="./images/logo.svg" alt="" width="80%"></a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse"
+                    data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item active">
+                            <a id="a" class="nav-link" href="#"><button type="button" class="btn btn-outline-warning"
+                                    style="background-color: #ffa366; color: aliceblue; border: 0;">Danh
+                                    mục</button></a>
+
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="btn btn-secondary dropdown-toggle" href="#" role="button" data-toggle="dropdown"
+                                aria-expanded="false"
+                                style="background-color: #ffa366; color: aliceblue; margin-top: 8px; border: 0 ;height: 36px;">
+                                Xem giá, tồn kho tại
+                            </a>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" href="#">Hà Nội</a>
+                                <a class="dropdown-item" href="#">Đà Nẵng</a>
+                                <a class="dropdown-item" href="#">TP.HCM</a>
+                                <a class="dropdown-item" href="#">Cần Thơ</a>
+                                <a class="dropdown-item" href="#">Hải Dương</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="#">Hải Phòng</a>
+                            </div>
+                        </li>
+
+                    </ul>
+                    <form class="form-inline my-2 my-lg-0" style="margin-right: 50px;">
+                        <input class="form-control mr-sm-2" type="search" placeholder="Bạn tìm gì..."
+                            aria-label="Search">
+                        <button class="btn btn-warning" type="submit"
+                            style="background-color: #ffa366; padding: 0 10px; margin: 0;"><i
+                                class="fa-solid fa-magnifying-glass"></i></button>
+                    </form>
+                    <ul class="navbar-nav ">
+                        <li class="nav-item ">
+                            <a class="nav-link" href="#" style="color:aliceblue;">
+                                <i class="fa-solid fa-phone-volume"></i>
+                                Gọi mua hàng</br>
+                                085 5100 001
+                            </a>
+                        </li>
+                        <li class=" nav-item">
+                            <a class="nav-link" href="#" style="color:aliceblue;">
+                                <i class="fa-solid fa-map-location-dot"></i>
+                                Cửa hàng</br>
+                                gần bạn
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#" style="color:aliceblue;"> <i
+                                    class="fa-solid fa-cart-shopping"></i></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#" style="color:aliceblue;"> <i
+                                    class="fa-regular fa-user"></i></a>
+                        </li>
+
+                    </ul>
+
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <div class="container-md main">
+        <div class="Login">
+            <div class="login__banner">
+                <img src="./images/log.svg" alt="">
+                <h5>QUYỀN LỢI THÀNH VIÊN</h5>
+                <p>Mua hàng khắp thế giới cực dễ dàng, nhanh chóng</p>
+                <p>Theo dõi chi tiết đơn hàng, địa chỉ thanh toán dễ dàng</p>
+                <p>Nhận nhiều chương trình ưu đãi hấp dẫn từ chúng tôi</p>
+            </div>
+            <div class="login__account"></div>
+        </div>
+    </div>
+
+    <div class="container-fluid">
+        <div class="container-md">
+            <div class="row">
+                <div class="col-xs-6 footer__link--info">
+                    <a href="" class="text-reset">Poco x4 Pro</a>
+                    </br>
+                    <a href="" class="text-reset">iPhone cũ giá rẻ</a>
+                    </br>
+                    <a href="" class="text-reset">iPhone 11 cũ</a>
+                    </br>
+                    <a href="" class="text-reset">iPhone 12 Pro Max cũ</a>
+                    </br>
+                </div>
+
+                <div class="col-xs-6 footer__link--info">
+                    <a href="" class="text-reset">Redmi note 11 Pro</a>
+                    </br>
+                    <a href="" class="text-reset">iPhone 11 chính hãng</a>
+                    </br>
+                    <a href="" class="text-reset">Galaxy S22 Ultra</a>
+                    </br>
+                    <a href="" class="text-reset">iPad Air siêu rẻ</a>
+                    </br>
+                </div>
+
+                <div class="col-xs-6 footer__link--info">
+                    <a href="" class="text-reset">Laptop LG Gram 2021</a>
+                    </br>
+                    <a href="" class="text-reset">iPhone 13</a>
+                    </br>
+                    <a href="" class="text-reset">iPhone 12 Pro</a>
+                    </br>
+                    <a href="" class="text-reset">iPad cũ</a>
+                    </br>
+                </div>
+
+                <div class="col-xs-6 footer__link--info">
+                    <a href="" class="text-reset">Có nên mua iPhone 12 Pro Max</a>
+                    </br>
+                    <a href="" class="text-reset">2022</a>
+                    </br>
+                    <a href="" class="text-reset">iPhone</a>
+                    </br>
+                    <a href="" class="text-reset">iPhone 14 Pro Max</a>
+                    </br>
+                </div>
+
+                <div class="col-xs-6 footer__link--info">
+                    <a href="" class="text-reset">Xiaomi redmi note</a>
+                    </br>
+                    </br>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+    </div>
+
+
+    <div class="container-md">
+        <div class="footer__top">
+            <div class="row">
+                <div class="col-md-3">
+                    <p class="title">Thông tin liên hệ</p></br>
+                    <a href="">Giới thiệu</a></br>
+                    <a href="">Hệ thống cửa hàng</a></br>
+                    <a href="">Chính sách bảo mật</a></br>
+                    <a href="">Mail</a></br>
+                    <p class="title">Hỗ trợ thanh toán</p></br>
+                    <img src="./images/visa.svg" alt="">
+                    <img src="./images/master_card.svg" alt="">
+                    <img src="./images/jbc.svg" alt="">
+                    <img src="./images/money.svg" alt="">
+                    <img src="./images/inter.svg" alt="">
+                    <img src="./images/tragop.svg" alt="">
+                    <a href="http://online.gov.vn/Home/WebDetails/9876?AspxAutoDetectCookieSupport=1"><img
+                            src="./images/bct.svg" alt=""></a>
+                    <a
+                        href="https://www.dmca.com/Protection/Status.aspx?ID=2dc901db-8576-4fea-ac8f-709448f10282&refurl=https://didongthongminh.vn/"><img
+                            src="./images/_dmca_premi_badge_4.png" alt=""></a>
+                </div>
+
+                <div class="col-md-3">
+                    <p class="title">Thông tin liên hệ</p></br>
+                    <a href="">Giới thiệu</a></br>
+                    <a href="">Hệ thống cửa hàng</a></br>
+                    <a href="">Chính sách bảo mật</a></br>
+                    <a href="">Mail</a></br>
+                </div>
+
+                <div class="col-md-3">
+                    <p class="title">Thông tin liên hệ</p></br>
+                    <a href="">Giới thiệu</a></br>
+                    <a href="">Hệ thống cửa hàng</a></br>
+                    <a href="">Chính sách bảo mật</a></br>
+                    <a href="">Mail</a></br>
+                </div>
+
+                <div class="col-md-3">
+                    <p class="title">Thông tin liên hệ</p></br>
+                    <a href="">Giới thiệu</a></br>
+                    <a href="">Hệ thống cửa hàng</a></br>
+                    <a href="">Chính sách bảo mật</a></br>
+                    <a href="">Mail</a></br>
+
+                    <p class="title">Kết nối với chúng tôi</p>
+                    <a href="https://www.facebook.com/didongthongminh.vn/"><img src="./images/logoface2.svg" alt=""></a>
+                    <a href="https://www.youtube.com/c/dreview"><img src="./images/logoyutube.svg" alt=""></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid footers">
+        <div class="footer">
+            <p>@ Bản quyền thuộc về Công Ty Cổ Phần Viễn Thông Di Động Thông Minh</p>
+        </div>
+    </div>
+</body>
+
+</html>
